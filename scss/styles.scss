@@ -1,0 +1,414 @@
+/**VARIABLES**/
+$primary_color: rgba(54, 70, 82, 0.918);
+$primary_title_color: rgba(252, 234, 72, 0.918);
+$white: rgb(255, 255, 255);
+$margen_general: 0;
+$margen_propuestas_works: 3rem;
+$font_style: normal;
+$background_size_slides: cover;
+$font: "Oswald", sans-serif;
+/** FIN VARIABLES**/
+/**MIXINS**/
+@mixin card-style {
+    font-style: $font_style;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+}
+@mixin background-slides-size-position {
+    background-size: $background_size_slides;
+    background-position: center center;
+}
+
+/**FIN MIXINS**/
+
+/**GENERALES**/
+.no-gutters {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+body {
+    margin: $margen_general;
+    background-color: $white;
+    font-family: $font;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    @include background-slides-size-position();
+}
+
+p {
+    font-style: $font_style;
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 1.6rem;
+    word-spacing: 0.2rem;
+    color: $primary_color;
+    text-align: center;
+    justify-content: center;
+    margin: 1.5rem 1rem 1.5rem 1rem;
+    padding-bottom: 1rem;
+}
+.p_slides {
+    font-style: $font_style;
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 1.6rem;
+    word-spacing: 0.2rem;
+    color: $white;
+    text-align: center;
+    justify-content: center;
+    margin: 1.5rem 1rem 1.5rem 1rem;
+    padding-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+}
+/** FIN GENERALES**/
+
+/**TITULOS**/
+
+.title {
+    text-align: center;
+    margin: 3rem 2rem 3rem 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: rgb(228, 202, 99);
+}
+.title1 {
+    text-align: center;
+    color: rgba(255, 255, 255, 0);
+    padding: 0.3rem;
+    font-size: 2rem;
+}
+.title2 {
+    font-style: $font_style;
+    font-size: 3.6rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    color: $primary_title_color;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+.title_form {
+    padding: 1rem;
+    font-style: $font_style;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: $primary_title_color;
+}
+/** FIN TITULOS**/
+
+/**HEADER **/
+
+.logotipo {
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+}
+
+.fotoPortada {
+    display: flex;
+    background-image: url(../imagenesGenerales/doSomethingGreat.jpg);
+    width: 100%;
+    height: 100vh;
+    margin: $margen_general;
+    border-radius: 0;
+    padding: 0.5rem 0 0.5rem 0;
+    @include background-slides-size-position();
+}
+
+/**NAVBAR**/
+
+.navbar {
+    background-color: none;
+    padding: 0.5rem;
+    font-family: $font;
+}
+
+.nav-link {
+    color: $primary_title_color !important;
+    font-style: $font_style;
+    font-weight: bold;
+    padding: 1.5rem;
+}
+
+.nav-item {
+    padding-left: 2rem;
+    .nav-item :hover {
+        color: $white !important;
+    }
+}
+
+.nav-item :hover {
+    color: $white !important;
+}
+
+.navbar-dark-section {
+    background-color: $primary_color;
+}
+
+/**FIN NAVBAR**/
+/** FIN HEADER **/
+/**FOOTER**/
+
+footer {
+    margin-top: 15rem;
+    border-bottom: 0;
+    border-radius: 1.5rem 1.5rem 0 0;
+    max-width: 100%;
+    text-align: center;
+    background-image: linear-gradient(to bottom, $white, rgba(54, 70, 82, 0.849));
+}
+.footer_contenedor {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .barra a {
+        border: none;
+        font-style: $font_style;
+        font-size: 110%;
+        font-weight: 600;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin: 2rem 5rem 2rem 5rem;
+        padding: 0.5rem;
+        color: $primary_color;
+    }
+    .barra a:hover {
+        color: $white;
+    }
+}
+
+/** FIN FOOTER**/
+
+/**MAIN INFO HOME**/
+.card-deck {
+    margin: 4.5rem;
+    padding-bottom: 5rem;
+    .card-img-top {
+        height: 50vh;
+        width: 100%;
+        @include background-slides-size-position();
+    }
+    .card-title {
+        @include card-style();
+    }
+}
+
+/** FIN MAIN INFO HOME**/
+
+/**WORKS**/
+
+/**CAROUSEL*/
+.carousel-item {
+    height: 500px;
+    margin-top: $margen_propuestas_works;
+}
+@media (min-width: 992px) {
+    .carousel-item {
+        height: 100vh !important;
+    }
+}
+.slide1 {
+    background-image: url(../imagenesGenerales/carousel1.jpg);
+    @include background-slides-size-position();
+}
+
+.slide2 {
+    background-image: url(../imagenesGenerales/carousel2.jpg);
+    @include background-slides-size-position();
+}
+
+.slide3 {
+    background-image: url(../imagenesGenerales/carousel3.jpg);
+    @include background-slides-size-position();
+}
+
+/** FIN CAROUSEL*/
+/**GALERIA WORKS**/
+
+#galeria_works col-lg-4 col-md-6 col-sm-12 {
+    padding: 30rem;
+    justify-content: center;
+}
+#galeria_works img {
+    width: 100vh;
+    height: 20rem;
+    padding: 1rem;
+}
+#galeria_works img:hover {
+    border: 2rem solid $white;
+}
+#galeria_works iframe {
+    background-position: center;
+    width: 100vh;
+    height: 25rem;
+    padding: 1rem;
+    justify-content: center;
+}
+/** FIN GALERIA WORKS**/
+/** FIN WORKS**/
+
+/**OUR SERVICE PLAN**/
+/**CARDS**/
+
+.card {
+    margin: 5rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgba(95, 158, 160, 0.438);
+    .card-img-top {
+        border-radius: 1rem 1rem 0 0;
+    }
+    .card-text {
+        color: rgb(0, 0, 0);
+    }
+    .card-title {
+        @include card-style();
+    }
+}
+
+/** FIN CARDS**/
+
+/**PLANES**/
+.text {
+    text-align: center;
+    padding: 5rem;
+    font-weight: 600;
+    color: $primary_color;
+}
+.plan {
+    padding: 5rem;
+    margin-bottom: $margen_propuestas_works;
+}
+.planesTitle {
+    justify-content: center;
+    text-align: center;
+    margin: 3rem 2rem 3rem 5rem;
+    color: rgb(54, 70, 82);
+    font-weight: bold;
+}
+
+/**FIN PLANES**/
+
+/** FIN OUR SERVICE PLAN**/
+
+/**ABOUT US**/
+
+/**CAROUSEL**/
+.carousel {
+    margin-bottom: $margen_propuestas_works;
+}
+.slideA {
+    background-image: url(../imagenesEquipo/persona1.jpg);
+    @include background-slides-size-position();
+}
+
+.slideB {
+    background-image: url(../imagenesEquipo/persona2.jpg);
+    @include background-slides-size-position();
+}
+.slideC {
+    background-image: url(../imagenesEquipo/persona3.jpg);
+    @include background-slides-size-position();
+}
+.slideD {
+    background-image: url(../imagenesEquipo/persona4.jpg);
+    @include background-slides-size-position();
+}
+/** FIN CAROUSEL**/
+
+/** FIN ABOUT US**/
+
+/**CONTACT**/
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin: $margen_propuestas_works;
+}
+fieldset {
+    font-family: $font;
+    font-style: $font_style;
+    font-size: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 1rem;
+    width: 40rem;
+    padding: 2rem;
+    background-color: $primary_color;
+    color: $white;
+    .input {
+        font-family: $font;
+        font-style: $font_style;
+        font-size: 100%;
+        border: none;
+        width: 15rem;
+        height: 1.5rem;
+        border-radius: 0.3rem;
+        background-color: $primary_color;
+        color: $white;
+    }
+    select {
+        font-family: $font;
+        font-style: $font_style;
+        font-size: 100%;
+        border: none;
+        width: 15rem;
+        height: 1.5rem;
+        border-radius: 0.3rem;
+        background-color: $primary_color;
+        color: rgba(255, 255, 255, 0.918);
+    }
+
+    .select-network {
+        display: flex;
+        justify-items: center;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+        padding: 2rem;
+        .select-network_network {
+            font-family: $font;
+            font-style: $font_style;
+            font-size: 110%;
+            color: rgba(255, 255, 255, 0.952);
+        }
+    }
+
+    textarea {
+        font-family: $font;
+        font-style: $font_style;
+        font-size: 100%;
+        width: 20rem;
+        height: 8rem;
+        border-radius: 0.3rem;
+        border-style: none;
+        background-color: $primary_color;
+        color: $white;
+    }
+    .buttons {
+        font-family: $font;
+        font-style: $font_style;
+        font-size: 100%;
+        font-weight: bold;
+        width: 10rem;
+        height: 2rem;
+
+        border-style: none;
+        background-color: $primary_color;
+        color: rgba(255, 255, 255, 0.952);
+        margin: 1rem;
+    }
+}
+
+/**FIN CONTACT**/
