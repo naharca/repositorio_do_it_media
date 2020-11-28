@@ -7,6 +7,7 @@ $margen_propuestas_works: 3rem;
 $font_style: normal;
 $background_size_slides: cover;
 $font: "Oswald", sans-serif;
+
 /** FIN VARIABLES**/
 /**MIXINS**/
 @mixin card-style {
@@ -44,13 +45,25 @@ p {
     font-weight: 300;
     line-height: 1.6rem;
     word-spacing: 0.2rem;
-    color: $primary_color;
+    color: rgb(0, 0, 0);
     text-align: center;
     justify-content: center;
     margin: 1.5rem 1rem 1.5rem 1rem;
     padding-bottom: 1rem;
 }
 .p_slides {
+    font-style: $font_style;
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 1.6rem;
+    word-spacing: 0.2rem;
+    color: $white;
+    text-align: center;
+    justify-content: center;
+    margin: 1.5rem 1rem 1.5rem 1rem;
+    padding-bottom: 1rem;
+}
+.p_footer {
     font-style: $font_style;
     font-size: 100%;
     font-weight: 300;
@@ -126,6 +139,7 @@ img {
 /**NAVBAR**/
 
 .navbar {
+    margin: $margen_general;
     background-color: none;
     padding: 0.5rem;
     font-family: $font;
@@ -148,48 +162,34 @@ img {
 .nav-item :hover {
     color: $white !important;
 }
-
 .navbar-dark-section {
     background-color: $primary_color;
 }
 
+
+
 /**FIN NAVBAR**/
 /** FIN HEADER **/
+
 /**FOOTER**/
 
-footer {
+.site-footer {
     margin-top: 15rem;
+    margin-bottom: 0;
     border-bottom: 0;
-    border-radius: 1.5rem 1.5rem 0 0;
     max-width: 100%;
     text-align: center;
-    background-image: linear-gradient(to bottom, $white, rgba(54, 70, 82, 0.849));
-}
-.footer_contenedor {
-    display: flex;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    .barra a {
-        border: none;
-        font-style: $font_style;
-        font-size: 110%;
-        font-weight: 600;
-        align-items: center;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        margin: 2rem 5rem 2rem 5rem;
-        padding: 0.5rem;
-        color: $primary_color;
-    }
-    .barra a:hover {
-        color: $white;
+    background-color: $primary_color;
+    .icon {
+        width: 3rem;
+        height: 3rem;
+        padding-top: 0.5rem;
+    
     }
 }
 
-/** FIN FOOTER**/
+
+/**FIN FOOTER**/
 
 /**MAIN INFO HOME**/
 .card-deck {
@@ -202,6 +202,10 @@ footer {
     }
     .card-title {
         @include card-style();
+    }
+    .card-body {
+        color: $primary_color;
+        border-radius: 0 0 0.5rem 0.5rem;
     }
 }
 
@@ -331,6 +335,7 @@ footer {
 /** FIN ABOUT US**/
 
 /**CONTACT**/
+
 .formulario {
     display: flex;
     justify-content: center;
@@ -403,12 +408,10 @@ fieldset {
         font-weight: bold;
         width: 10rem;
         height: 2rem;
-
         border-style: none;
         background-color: $primary_color;
         color: rgba(255, 255, 255, 0.952);
         margin: 1rem;
     }
 }
-
 /**FIN CONTACT**/

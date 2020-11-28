@@ -22,13 +22,25 @@ p {
   font-weight: 300;
   line-height: 1.6rem;
   word-spacing: 0.2rem;
-  color: rgba(54, 70, 82, 0.918);
+  color: black;
   text-align: center;
   justify-content: center;
   margin: 1.5rem 1rem 1.5rem 1rem;
   padding-bottom: 1rem; }
 
 .p_slides {
+  font-style: normal;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 1.6rem;
+  word-spacing: 0.2rem;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin: 1.5rem 1rem 1.5rem 1rem;
+  padding-bottom: 1rem; }
+
+.p_footer {
   font-style: normal;
   font-size: 100%;
   font-weight: 300;
@@ -97,6 +109,7 @@ img {
 
 /**NAVBAR**/
 .navbar {
+  margin: 0;
   background-color: none;
   padding: 0.5rem;
   font-family: "Oswald", sans-serif; }
@@ -121,36 +134,19 @@ img {
 /**FIN NAVBAR**/
 /** FIN HEADER **/
 /**FOOTER**/
-footer {
+.site-footer {
   margin-top: 15rem;
+  margin-bottom: 0;
   border-bottom: 0;
-  border-radius: 1.5rem 1.5rem 0 0;
   max-width: 100%;
   text-align: center;
-  background-image: linear-gradient(to bottom, white, rgba(54, 70, 82, 0.849)); }
+  background-color: rgba(54, 70, 82, 0.918); }
+  .site-footer .icon {
+    width: 3rem;
+    height: 3rem;
+    padding-top: 0.5rem; }
 
-.footer_contenedor {
-  display: flex;
-  justify-items: center;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; }
-  .footer_contenedor .barra a {
-    border: none;
-    font-style: normal;
-    font-size: 110%;
-    font-weight: 600;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin: 2rem 5rem 2rem 5rem;
-    padding: 0.5rem;
-    color: rgba(54, 70, 82, 0.918); }
-  .footer_contenedor .barra a:hover {
-    color: white; }
-
-/** FIN FOOTER**/
+/**FIN FOOTER**/
 /**MAIN INFO HOME**/
 .card-deck {
   margin: 4.5rem;
@@ -166,6 +162,9 @@ footer {
     font-weight: 700;
     text-align: center;
     text-transform: capitalize; }
+  .card-deck .card-body {
+    color: rgba(54, 70, 82, 0.918);
+    border-radius: 0 0 0.5rem 0.5rem; }
 
 /** FIN MAIN INFO HOME**/
 /**WORKS**/
