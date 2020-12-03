@@ -131,6 +131,14 @@ img {
 .navbar-dark-section {
   background-color: rgba(54, 70, 82, 0.918); }
 
+/**COLLAPSE MENU**/
+.navbar-dark .navbar-toggler-icon {
+  background-image: url(../imagenesGenerales/menu.svg); }
+
+.navbar-toggler-icon {
+  background-image: url(../imagenesGenerales/menu.svg); }
+
+/**FIN COLLAPSE MENU**/
 /**FIN NAVBAR**/
 /** FIN HEADER **/
 /**FOOTER**/
@@ -149,7 +157,7 @@ img {
 /**FIN FOOTER**/
 /**MAIN INFO HOME**/
 .card-deck {
-  margin: 4.5rem;
+  margin: 1rem;
   padding-bottom: 5rem; }
   .card-deck .card-img-top {
     height: 50vh;
@@ -218,7 +226,7 @@ img {
 /**OUR SERVICE PLAN**/
 /**CARDS**/
 .card {
-  margin: 5rem;
+  margin: 1.5rem;
   border-radius: 1rem;
   border: none;
   background-color: rgba(95, 158, 160, 0.438); }
