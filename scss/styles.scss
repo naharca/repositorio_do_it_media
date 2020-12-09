@@ -2,7 +2,7 @@
 $primary_color: rgba(54, 70, 82, 0.918);
 $primary_title_color: rgba(252, 234, 72, 0.918);
 $white: rgb(255, 255, 255);
-$margen_general: 0;
+$margen_general: 0%;
 $margen_propuestas_works: 3rem;
 $font_style: normal;
 $background_size_slides: cover;
@@ -191,10 +191,8 @@ img {
         width: 3rem;
         height: 3rem;
         padding-top: 0.5rem;
-    
     }
 }
-
 
 /**FIN FOOTER**/
 
@@ -221,9 +219,10 @@ img {
 /**WORKS**/
 
 /**CAROUSEL*/
+
 .carousel-item {
     height: 500px;
-    margin-top: $margen_propuestas_works;
+    margin-top: $margen_general;
 }
 @media (min-width: 992px) {
     .carousel-item {
@@ -309,7 +308,6 @@ img {
     color: rgb(54, 70, 82);
     font-weight: bold;
 }
-
 
 /**FIN PLANES**/
 
